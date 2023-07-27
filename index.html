@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <title>BMI Calculator</title>
+</head>
+
+<body>
+
+<h1 class="head-container" id="title">BMI Calculator</h1>
+
+<div id="gradient" class="container">
+    <div class="info-container">
+        <form id="form">
+            <label for="f_name">First Name:</label><br>
+            <input type="text" id="f_name"><br>
+
+            <label for="l_name">Last Name:</label><br>
+            <input type="text" id="l_name"><br>
+
+            <label for="height">Height (cm):</label><br>
+            <input type="number" id="height" min="50"><br>
+
+            <label for="weight">Weight (kg):</label><br>
+            <input type="number" id="weight" min="5"><br>
+
+            <button type="button" id="calculates">Calculate BMI</button>
+        </form>
+    </div>
+    <div id="results" class="result-container">
+        <h2>Your Results:</h2>
+
+        <p>Hi, <span id="r_name"></span></p>
+
+        <p>Your BMI is: <span id="r_bmi"></span></p>
+
+        <p>Weight Status: <span id="r_weight"></span></p>
+
+        <p><span id="r_eme"></span></p>
+    </div>
+</div>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

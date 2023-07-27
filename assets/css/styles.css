@@ -1,0 +1,123 @@
+:root {
+    --primay-color: #006c6c;
+    --secondary-color: #F4B183;
+    --background: #F2F4F3;
+    --light-color: #D4E9E7;
+    --background-gradient: linear-gradient(to right, #DDEAE3, #AAD0D1,
+                    #87BFC2, #9FB8AD, #E9EBE3);
+    --p-font: 'Bungee Shade';
+    --s-font: 'Open sans';
+}
+
+
+*{
+    color: var(--primay-color);
+}
+body{
+    background: wheat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primay-color);
+}
+.head-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#title{
+    font-size: 3.5rem ;
+    font-family: var(--p-font);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 900px;
+    background: var(--light-color);
+    border-radius: 40px;
+    box-shadow: 0 5px 3px rgba(0,0,0,0.1);
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    text-align: left;
+}
+
+.result-container{
+    background: var(--background);
+    border-radius: 20px;
+    box-shadow: 0 5px 3px rgba(0,0,0,0.1);
+    padding: 12px;
+    width: 80%;
+    margin: 50px auto 10px;
+    height: 70%;
+    text-align: left;
+}
+
+#form input{
+    margin: 10px;
+    margin-left: 0;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+
+}
+
+#form input:focus{
+    animation: input 0.5s ease-in-out;
+}
+
+#form input:focus + label{
+    animation: label 0.5s ease-in-out;
+}
+
+#form label{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px;
+    margin-left: 0;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+#form button{
+    background: var(--secondary-color);
+    color: var(--background);
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: solid;
+    padding: 5px;
+    margin: 10px;
+    margin-left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#form button:hover{
+    background: var(--background);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+#form button:focus{
+    animation: submit 0.5s ease-in-out;
+}
+
+#form button:focus + label{
+    animation: label 0.5s ease-in-out;
+}
+
