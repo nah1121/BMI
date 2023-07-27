@@ -17,7 +17,6 @@ body{
     background: wheat;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     color: var(--primay-color);
 }
 .head-container{
@@ -56,6 +55,12 @@ body{
 }
 
 .result-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    text-align: left;
     background: var(--background);
     border-radius: 20px;
     box-shadow: 0 5px 3px rgba(0,0,0,0.1);
@@ -121,3 +126,81 @@ body{
     animation: label 0.5s ease-in-out;
 }
 
+@media(max-width: 800px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+        max-width: 900px;
+        background: var(--light-color);
+        border-radius: 40px;
+    }
+    .info-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        text-align: left;
+    }
+    .result-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        text-align: center;
+        background: var(--background);
+        border-radius: 20px;
+        box-shadow: 0 5px 3px rgba(0,0,0,0.1);
+        padding: 12px;
+        width: 80%;
+        margin: 50px auto 10px;
+        height: 70%;
+        text-align: center;
+    }
+    #form input{
+        margin: 10px;
+        margin-left: 0;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        width: 100%;
+    }
+    #form input:focus{
+        animation: input 0.5s ease-in-out;
+    }
+    #form input:focus + label{
+        animation: label 0.5s ease-in-out;
+    }
+    #form label{
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 10px;
+        margin-left: 0;
+        padding: 5px;
+        border-radius: 10px;
+        border: none;
+        transition: all 0.5s ease-in-out;
+    }
+    #form button{
+        background: var(--secondary-color);
+        color: var(--background);
+        font-weight: bold;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        border: solid;
+        padding: 5px;
+        margin: 10px;
+        margin-left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    #form button:hover{
+        background: var(--background);
+        color: var(--secondary-color);
+        cursor: pointer;
+    }
+
+}
